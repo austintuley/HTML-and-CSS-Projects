@@ -8,16 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="academy_cinemas.css">
-
     <title>Academy Cinemas</title>
   </head>
   <body>
 
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-info" style="z-index: 100;">          
+    <div class="container" id="home">
+        <nav class="navbar navbar-expand-lg navbar-light bg-info sticky-top" style="z-index: 100">          
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link text-light" href="#home">Home</a>
+                </li>
                 <li class="nav-item active">
                   <a class="nav-link text-light" href="#about">About</a>
                 </li>
@@ -63,13 +64,13 @@
                 <h3>Now Playing:</h3>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <a class="nav-link" href="#">Kong: Skull Island</a>
+                        <a class="nav-link" href="#kong">Kong: Skull Island</a>
                     </li>
                     <li class="list-group-item">
-                        <a class="nav-link" href="#">Ghost in the Shell</a>
+                        <a class="nav-link" href="#ghost">Ghost in the Shell</a>
                     </li>
                     <li class="list-group-item">
-                        <a class="nav-link" href="#">Beauty and the Beast</a>
+                        <a class="nav-link" href="#beauty">Beauty and the Beast</a>
                     </li>
                 </ul>
 
@@ -82,9 +83,9 @@
               <h3>Showtimes:</h3>
                 <div class="card-deck">
                   <div class="card">
-                    <img class="card-img-top img-fluid" src="./img/kongskullisland.jpg" alt="Card image cap">
+                    <img class="card-img-top img-fluid" id="kong" src="./img/kongskullisland.jpg" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">Kong: Skull Island</h5>
+                      <h5 class="card-title" id="kong">Kong: Skull Island</h5>
                       <p class="card-text">A team of scientists explore an uncharted island in the Pacific, vanturing into
                         the domain of the mighty Kong, and must fight to escape a primal Eden.</p>
                       <p class="card-text">
@@ -98,7 +99,7 @@
                     </div>
                   </div>
                   <div class="card">
-                    <img class="card-img-top" src="./img/ghostintheshell.jpg" alt="Card image cap" height="196px">
+                    <img class="card-img-top" id="ghost" src="./img/ghostintheshell.jpg" alt="Card image cap" height="196px">
                     <div class="card-body">
                       <h5 class="card-title">Ghost in the Shell</h5>
                       <p class="card-text">In the near future, Major Mila Killian is the first of her kind: a human saved
@@ -115,7 +116,7 @@
                     </div>
                   </div>
                   <div class="card">
-                    <img class="card-img-top" src="./img/beautyandthebeast.jpg" alt="Card image cap" height="196px">
+                    <img class="card-img-top" id="beauty" src="./img/beautyandthebeast.jpg" alt="Card image cap" height="196px">
                     <div class="card-body">
                       <h5 class="card-title">Beauty and the Beast</h5>
                       <p class="card-text">A selfish prince is cursed to become a monster for the rest of his life,
@@ -135,6 +136,7 @@
           <!-- End Showtimes-->
 
           <!-- Deals -->
+          <!-- not originally in tutortial, did my best to try and match the instructor-->
           <div id="deals">
             <div class="jumbotron jumbotron-fluid bg-info text-light text-center">
               <div class="container">
@@ -153,6 +155,7 @@
                 <div class="form-group">  
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
                 </div>
+                <!-- Popover effect once button is clicked -->
                 <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie rewards! ">
                   Sign up!
                 </button>
@@ -194,7 +197,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-primary" onclick="">Save changes</button>
                 </div>
               </div>
             </div>
